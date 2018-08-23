@@ -7,10 +7,8 @@ body {
 	font-family: Arial;
 }
 
-header {
+header.page-header {
 	width: 100vw;
-	position: fixed;
-	background-color: #fff;
 	border-bottom: 2px solid #f1f1f1;
 }
 
@@ -20,18 +18,82 @@ header {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	font-weight: bold;
 }
 
 .header-container a {
 	margin-left: 55px;
 	padding: 40px 0;
+	text-decoration: none;
 }
 
 nav {
 	display: flex;
+	font-weight: bold;
 }
 
-a {
-	text-decoration: none;
+main {
+	width: 100vw;
+}
+
+.main-container {
+	width: 95%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.general {
+	grid-column: span 1;
+	grid-row: span 2;
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: 1fr;
+}
+
+.favorites {
+	grid-column: span 1;
+	grid-row: span 2;
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: 1fr;
+}
+
+.devices {
+	grid-column: span 2;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: 1fr;
+}
+
+section.general header, section.favorites header {
+	grid-row: span 1;
+	grid-column: span 1;
+}
+
+section.devices header {
+	grid-row: span 2;
+	grid-column: span 1;
+}
+
+.header-title {
+	font-weight: bold;
+}
+
+.general-content {
+	/*background: pink;*/
+	grid-row: span 5;
+	grid-column: span 1;
+}
+
+.favorites-content {
+	/*background: white;*/
+	grid-row: span 5;
+	grid-column: span 1;
+}
+
+.devices-content {
+	/*background: lightgray;*/
+	grid-row: span 3;
+	grid-column: span 1;
 }
