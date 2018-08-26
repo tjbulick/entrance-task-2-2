@@ -7,7 +7,7 @@ body {
 	font-family: Arial;
 }
 
-header.page-header {
+.page-header {
 	width: 100vw;
 	border-bottom: 2px solid #f1f1f1;
 }
@@ -26,12 +26,21 @@ header.page-header {
 	text-decoration: none;
 }
 
+.header-container a:visited {
+	color: #858585;
+}
+
+/*.header-container a:active {
+	color: #333333;
+}
+это была заготовка для подсветки ссылок в главном меню*/
+
 nav {
 	display: flex;
 	font-weight: bold;
 }
 
-main {
+.page-main {
 	width: 100vw;
 }
 
@@ -81,19 +90,41 @@ section.devices header {
 }
 
 .general-content {
-	/*background: pink;*/
 	grid-row: span 5;
 	grid-column: span 1;
 }
 
 .favorites-content {
-	/*background: white;*/
 	grid-row: span 5;
 	grid-column: span 1;
 }
 
 .devices-content {
-	/*background: lightgray;*/
 	grid-row: span 3;
 	grid-column: span 1;
+}
+
+.page-footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-container {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.75em;
+	color: #858585;
+	padding: 25px 0;
+}
+
+.footer-links a {
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+.footer-links a:visited {
+	color: #858585;
 }
