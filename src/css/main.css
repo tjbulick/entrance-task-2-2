@@ -22,18 +22,14 @@ body {
 
 .header-container a {
 	margin-left: 55px;
-	padding: 40px 0;
+	padding: 35px 0;
 	text-decoration: none;
-}
-
-.header-container a:visited {
 	color: #858585;
 }
 
-/*.header-container a:active {
+.header-container a:first-child {
 	color: #333333;
 }
-это была заготовка для подсветки ссылок в главном меню*/
 
 nav {
 	display: flex;
@@ -48,8 +44,9 @@ nav {
 	width: 95%;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
+	grid-column-gap: 25px;
 }
 
 .general {
@@ -75,28 +72,37 @@ nav {
 	grid-template-columns: 1fr;
 }
 
-section.general header, section.favorites header {
+.general header, .favorites header {
 	grid-row: span 1;
 	grid-column: span 1;
 }
 
-section.devices header {
+.devices header {
 	grid-row: span 2;
 	grid-column: span 1;
+	display: flex;
 }
 
 .header-title {
 	font-weight: bold;
+	padding-top: 30px;
+	padding-bottom: 20px;
 }
 
 .general-content {
 	grid-row: span 5;
 	grid-column: span 1;
+	background-color: #ebe9e4;
+	border-radius: 20px;
+	padding: 25px;
 }
 
 .favorites-content {
 	grid-row: span 5;
 	grid-column: span 1;
+	background-color: #ebe9e4;
+	border-radius: 20px;
+	padding: 25px;
 }
 
 .devices-content {
@@ -127,4 +133,25 @@ section.devices header {
 
 .footer-links a:visited {
 	color: #858585;
+}
+
+.devices-filter {
+	display: flex;
+	color: #000000;
+	font-weight: bold;
+	align-items: center;
+}
+
+.devices-filter button {
+	font-weight: bold;
+	font-size: 0.75em;
+	padding: 7px 15px;
+	border: none;
+	border-radius: 20px;
+	background-color: #F7F7F7;
+	margin-left: 15px;
+}
+
+.devices-filter button:first-child {
+	background-color: #FFD93E;
 }
