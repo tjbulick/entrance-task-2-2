@@ -92,7 +92,8 @@ nav {
 .general-content {
 	grid-row: span 5;
 	grid-column: span 1;
-	background-color: #ebe9e4;
+	background-image: url(../img/bg@2x.png);
+	background-size: cover;
 	border-radius: 20px;
 	padding: 25px;
 }
@@ -154,4 +155,26 @@ nav {
 
 .devices-filter button:first-child {
 	background-color: #FFD93E;
+}
+
+.devices-content {
+	display: flex;
+}
+
+.device {
+	background-color: #F7F7F7;
+	margin-right: 15px;
+	padding: 15px;
+	border-radius: 20px;
+	/*flex: 1;*/
+}
+
+.device > .name {
+	font-size: 0.75em;
+	font-weight: bold;
+}
+
+.device > .status {
+	font-size: 0.75em;
+	color: #858585;
 }
